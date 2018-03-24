@@ -12,4 +12,9 @@ stdenv.mkDerivation {
   name = "test-project";
 
   buildInputs = [ awscli awsebcli ];
+
+  shellHook = ''
+    alias hi="echo Hello nix-shell User!"
+    hi
+  '';
 }
